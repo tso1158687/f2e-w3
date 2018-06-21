@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AccordionModule} from 'primeng/accordion';
+import { AppRoutingModule } from './/app-routing.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,7 +12,8 @@ import {AccordionModule} from 'primeng/accordion';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
