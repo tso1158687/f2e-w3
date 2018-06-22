@@ -7,6 +7,7 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
   font-family: 'Noto Sans TC';
   box-sizing: border-box;
 }
+
 $red:#d0021b;
 $yellow:#f5a623;
 $blue:#4a90e2;
@@ -17,24 +18,69 @@ $grayL3:#c8c8c8;
 $grayL4:#757575;
 $white:#FFFFFF;
 $black:#000000;
-
 @mixin title {
   font-weight: bold;
   font-size: 24px;
 }
+
 @mixin subtitle {
   font-weight: bold;
   font-size: 20px;
 }
+
 @mixin subtitle2 {
   font-size: 14px;
 }
+
 @mixin table-information {
   font-size: 14px;
 }
+
 @mixin remark {
   font-size: 16px;
 }
+
 @mixin placegolder {
   font-size: 16px
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  background-color: $black;
+  div {
+    // width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    a {
+      color: #9b9b9b;
+      display: inline-block;
+      padding-right: 30px;
+      padding-left: 30px;
+      text-align: center;
+      height: 100%;
+      line-height: 70px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      &.active {
+        color: $white;
+        border-bottom: 4px solid $white;
+      }
+      &.nav-band{
+        @include title;
+        color: $white;
+      }
+    }
+  }
+}
+p-card{
+  text-align: center;
 }

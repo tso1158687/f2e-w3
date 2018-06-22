@@ -8,6 +8,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductComponent } from './product/product.component';
+import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     BrowserAnimationsModule,
     AccordionModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
