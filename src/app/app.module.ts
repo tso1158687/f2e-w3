@@ -10,6 +10,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { ProductComponent } from './product/product.component';
 import {CardModule} from 'primeng/card';
 import {ChartModule} from 'primeng/chart';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ChartModule} from 'primeng/chart';
     AccordionModule,
     AppRoutingModule,
     CardModule,
-    ChartModule
+    ChartModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+<div class="ui-g">總攬</div>
 <div class="ui-g">
   <div class="ui-g-4">
     <p-card>
@@ -25,5 +26,25 @@
   </div>
 </div>
 <div class="ui-g">
-  <p-chart type="doughnut" [data]="data"></p-chart>
+  <p-chart type="line" [data]="data" width="100vw" height="80vh"></p-chart>
+</div>
+<div class="ui-g">
+  <div class="ui-g-6">
+    <p-card>
+      <p-header>
+        流量來源
+      </p-header>
+      <div *ngFor="let web of websiteData">
+          <i class="fa fa-3x fa-{{web.icon}}" aria-hidden="true"></i>{{web.url}}{{web.quality}}{{web.rate}}
+      </div>
+    </p-card>
+  </div>
+  <div class="ui-g-6">
+    <p-card>
+      <p-header>
+        最新訂單
+      </p-header>
+      Body Content
+    </p-card>
+  </div>
 </div>

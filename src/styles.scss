@@ -81,6 +81,19 @@ nav {
     }
   }
 }
+// .ui-g{
+//   >*{
+//     background-color: $white;
+//   }
+// }
 p-card{
   text-align: center;
+}
+i{
+  &.fa-arrow-up{
+    color: $red
+  }
+  &.fa-arrow-down{
+    color: $green;
+  }
 }
