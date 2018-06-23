@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductComponent } from './product/product.component';
 import {CardModule} from 'primeng/card';
+import {ChartModule} from 'primeng/chart';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import {CardModule} from 'primeng/card';
     BrowserAnimationsModule,
     AccordionModule,
     AppRoutingModule,
-    CardModule
+    CardModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
