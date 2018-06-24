@@ -1,32 +1,32 @@
-<div class="ui-g">總攬</div>
-<div class="ui-g">
+<!-- <div class="ui-g">總覽</div> -->
+<div class="ui-g total-card">
   <div class="ui-g-4">
     <p-card>
       <p-header>
-        總收入
+        <i class="fa fa-get-pocket" aria-hidden="true"></i>總收入
       </p-header>
-      Body Content
+      54540
     </p-card>
   </div>
   <div class="ui-g-4">
     <p-card>
       <p-header>
-        總支出
+        <i class="fa fa-repeat" aria-hidden="true"></i>總支出
       </p-header>
-      Body Content
+      12660
     </p-card>
   </div>
   <div class="ui-g-4">
     <p-card>
       <p-header>
-        網路銷售額
+        <i class="fa fa-money" aria-hidden="true"></i>網路銷售額
       </p-header>
-      Body Content
+      41880
     </p-card>
   </div>
 </div>
 <div class="ui-g">
-  <p-chart type="line" [data]="data" width="95vw" height="80vh"></p-chart>
+  <p-chart type="line" [data]="data" width="95vw" height="400"></p-chart>
 </div>
 <div class="ui-g">
   <div class="ui-g-6">
@@ -45,8 +45,8 @@
           {{web.quality}}
         </div>
         <div class="ui-g-3 rate">
-            <i *ngIf="web.rate>0" class="fa fa-arrow-up" aria-hidden="true"></i>
-            <i *ngIf="web.rate<0" class="fa fa-arrow-down" aria-hidden="true"></i>
+          <i *ngIf="web.rate>0" class="fa fa-arrow-up" aria-hidden="true"></i>
+          <i *ngIf="web.rate<0" class="fa fa-arrow-down" aria-hidden="true"></i>
           <span class="rate" [ngClass]="{'rate-up': web.rate>0,'rate-down':web.rate<0}">
             {{processRate(web.rate)}}
           </span>

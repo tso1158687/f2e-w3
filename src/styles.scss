@@ -48,6 +48,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
+  font-size: 16px;
 }
 
 nav {
@@ -80,6 +81,10 @@ nav {
       }
     }
   }
+}
+
+.center {
+  text-align: center;
 }
 
 p-card {
@@ -118,7 +123,37 @@ i {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-
+.total-card{
+  >div{
+    &:nth-child(1){
+      .ui-card-body{
+        color: $green;
+      }
+    }
+    &:nth-child(2){
+      .ui-card-body{
+        color:$red;
+      }
+    }
+    &:nth-child(3){
+      .ui-card-body{
+        color:$blue;
+      }
+    }
+  }
+  i{
+    margin-right: 10px;
+  }
+  .ui-card-header{
+    padding-left: 0;
+    text-align: center;
+  }
+  .ui-card-body{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
 // 流量來源
 .data-source {
   .source-item {
@@ -150,7 +185,8 @@ i {
     padding-right: 40px;
     height: 110px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #ebebeb;;
+    border-bottom: 1px solid #ebebeb;
+    ;
     >div {
       display: inline-block;
       &.pic {
@@ -194,11 +230,11 @@ i {
           display: inline;
           right: -0%;
           bottom: 80px;
-          >div{
-            &:first-child{
+          >div {
+            &:first-child {
               font-size: 14px;
             }
-            &:last-child{
+            &:last-child {
               @include subtitle;
             }
           }
@@ -207,3 +243,122 @@ i {
     }
   }
 }
+
+// 產品管理頁面
+.product-table {
+  button {
+    border-radius: 4px;
+    color: $white;
+    &.publish {
+      background-color: $green;
+      border: 1px solid $green;
+      &.ui-button:enabled:hover {
+        background-color: $green;
+        border: 1px solid $green;
+      }
+    }
+    &.draft {
+      background-color: #9b9b9b;
+      border: 1px solid #9b9b9b;
+      &.ui-button:enabled:hover {
+        background-color: #9b9b9b;
+        border: 1px solid #9b9b9b;
+      }
+    }
+  }
+}
+
+// 訂單管理頁面
+.order-table {
+  tr {
+    &.done {
+      text-decoration: line-through;
+      color: #9b9b9b;
+    }
+    &.unpaid {
+      color: #9b9b9b;
+    }
+  }
+  .ui-splitbutton {
+    border-radius: 4px;
+    color: $white;
+    &.paid {
+      button {
+        background-color: $green;
+        border: $green
+      }
+      .ui-widget.ui-button:enabled:hover {
+        background-color: $green;
+        border: $green
+      }
+    }
+    &.unpaid {
+      button {
+        background-color: #9b9b9b;
+        border: #9b9b9b;
+      }
+      .ui-widget.ui-button:enabled:hover {
+        background-color: #9b9b9b;
+        border: #9b9b9b;
+      }
+    }
+    &.shipping {
+      button {
+        background-color: $yellow;
+        border: $yellow;
+      }
+      .ui-widget.ui-button:enabled:hover {
+        background-color: $yellow;
+        border: $yellow;
+      }
+    }
+    &.done {
+      button {
+        background-color: $blue;
+        border: $blue;
+      }
+      .ui-widget.ui-button:enabled:hover {
+        background-color: $blue;
+        border: $blue;
+      }
+    }
+  }
+}
+
+// table通用設定
+.ui-table {
+  table {
+    border: 0;
+  }
+  .ui-table-thead {
+    >tr {
+      >th {
+        background-color: $white;
+        border: 1px solid $white;
+        color: $black;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+  .ui-table-tbody {
+    >tr {
+      background-color: #F2F2F2;
+      border: 1px solid #F2F2F2;
+      &:nth-child(even) {
+        background-color: #EBEBEB;
+        border: 1px solid #EBEBEB;
+      }
+      td {
+        border: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+// 1:paid
+// 2:unpaid
+// 3:shipping
+// 4:done

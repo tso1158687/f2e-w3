@@ -12,6 +12,13 @@ export class ProductComponent implements OnInit {
   constructor(private service: DataService) {}
 
   ngOnInit() {
+     this.service.getProductList()
+     .subscribe(
+       e => {
+         console.log(e);
+        this.productList = e;
+       }
+     );
     this.cols = [
       { field: 'product', header: '產品' },
       { field: 'origonal', header: '原價' },
@@ -21,9 +28,18 @@ export class ProductComponent implements OnInit {
       { field: 'inventory', header: '數量' },
       { field: 'status', header: '狀態' }
     ];
-    this.productList = this.service.getProductList();
   }
+  processStatus(status) {
+    if (status === 0) {
+      return '發布';
+    } else {
+      return '草稿';
+    }
+  }
+  // changeStatus(status){
+  //   console.log(status)
 
+  // }
 }
 // product
 // original

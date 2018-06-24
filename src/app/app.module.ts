@@ -12,6 +12,9 @@ import {CardModule} from 'primeng/card';
 import {ChartModule} from 'primeng/chart';
 import {TooltipModule} from 'primeng/tooltip';
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {MenuModule} from 'primeng/menu';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {TableModule} from 'primeng/table';
     CardModule,
     ChartModule,
     TooltipModule,
-    TableModule
+    TableModule,
+    ButtonModule,
+    SplitButtonModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
