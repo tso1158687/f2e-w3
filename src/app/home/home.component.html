@@ -26,25 +26,49 @@
   </div>
 </div>
 <div class="ui-g">
-  <p-chart type="line" [data]="data" width="100vw" height="80vh"></p-chart>
+  <p-chart type="line" [data]="data" width="95vw" height="80vh"></p-chart>
 </div>
 <div class="ui-g">
   <div class="ui-g-6">
-    <p-card>
+    <p-card styleClass="data-source">
       <p-header>
         流量來源
       </p-header>
-      <div *ngFor="let web of websiteData">
-          <i class="fa fa-3x fa-{{web.icon}}" aria-hidden="true"></i>{{web.url}}{{web.quality}}{{web.rate}}
+      <div class="ui-g source-item" *ngFor="let web of websiteData">
+        <div class="ui-g-2 icon">
+          <i class="fa fa-3x fa-{{web.icon}}" aria-hidden="true"></i>
+        </div>
+        <div class="ui-g-4 url">
+          {{web.url}}
+        </div>
+        <div class="ui-g-3 quality">
+          {{web.quality}}
+        </div>
+        <div class="ui-g-3 rate">
+            <i *ngIf="web.rate>0" class="fa fa-arrow-up" aria-hidden="true"></i>
+            <i *ngIf="web.rate<0" class="fa fa-arrow-down" aria-hidden="true"></i>
+          <span class="rate" [ngClass]="{'rate-up': web.rate>0,'rate-down':web.rate<0}">
+            {{processRate(web.rate)}}
+          </span>
+        </div>
       </div>
     </p-card>
   </div>
   <div class="ui-g-6">
-    <p-card>
+    <p-card styleClass="latest-order">
       <p-header>
         最新訂單
       </p-header>
-      Body Content
+      <div class="order-item">
+        <div class="pic">
+          <span></span>
+        </div>
+        <div class="content">
+          <div class="title">title</div>
+          <div class="date">date<i class="fa fa-clock-o" aria-hidden="true"></i></div>
+          <div class="name">name<i class="fa fa-male" aria-hidden="true"></i></div>
+        </div>
+      </div>
     </p-card>
   </div>
 </div>

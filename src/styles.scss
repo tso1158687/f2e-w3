@@ -74,26 +74,105 @@ nav {
         color: $white;
         border-bottom: 4px solid $white;
       }
-      &.nav-band{
+      &.nav-band {
         @include title;
         color: $white;
       }
     }
   }
 }
-// .ui-g{
-//   >*{
-//     background-color: $white;
-//   }
-// }
-p-card{
+p-card {
   text-align: center;
 }
-i{
-  &.fa-arrow-up{
+
+i {
+  &.fa-arrow-up {
     color: $red
   }
-  &.fa-arrow-down{
+  &.fa-arrow-down {
     color: $green;
+  }
+}
+
+.layout {
+  padding: 10px 26px;
+}
+
+.rate {
+  padding-left: 10px;
+}
+
+.rate-up {
+  color: $red;
+}
+
+.rate-down {
+  color: $green;
+}
+
+.ui-card-header {
+  @include title;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+// 流量來源
+.data-source {
+  .source-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ebebeb;
+    height: 113px;
+    line-height: 50px;
+    &:last-child {
+      border: 0px
+    }
+    .url {
+      color: #9b9b9b;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .quality {
+      color: $black;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+// 最新訂單
+.latest-order {
+  .order-item {
+    padding-left: 40px;
+    padding-right: 40px;
+    >div {
+      display: inline-block;
+      &.pic {
+        min-width: 110px;
+        width: 20%;
+        span {
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          background-image: url('https://p2.bahamut.com.tw/B/ACG/c/83/0000065483.PNG');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      &.content{
+        width: 80%;
+        .title{
+          @include subtitle()
+        }
+        .date{
+          color: #9b9b9b;
+        }
+        .name{
+          color: #9b9b9b;
+        }
+      }
+    }
   }
 }

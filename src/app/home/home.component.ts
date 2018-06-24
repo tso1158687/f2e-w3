@@ -51,4 +51,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {}
+  processRate(rate) {
+    return Math.abs(rate) + '%';
+  }
 }
