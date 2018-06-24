@@ -59,14 +59,24 @@
       <p-header>
         最新訂單
       </p-header>
-      <div class="order-item">
+      <div class="order-item" *ngFor="let order of latestOrders">
         <div class="pic">
           <span></span>
         </div>
         <div class="content">
-          <div class="title">title</div>
-          <div class="date">date<i class="fa fa-clock-o" aria-hidden="true"></i></div>
-          <div class="name">name<i class="fa fa-male" aria-hidden="true"></i></div>
+          <div class="title">{{order.title}}</div>
+          <div class="date">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            {{order.time | date:'yyyy/MM/dd HH:MM'}}
+          </div>
+          <div class="name">
+            <i class="fa fa-male" aria-hidden="true"></i>
+            {{order.name}}
+          </div>
+          <div class="total">
+            <div>總計</div>
+            <div>{{order.total}}</div>
+          </div>
         </div>
       </div>
     </p-card>

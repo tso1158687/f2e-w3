@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import {CardModule} from 'primeng/card';
 import {ChartModule} from 'primeng/chart';
 import {TooltipModule} from 'primeng/tooltip';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {TooltipModule} from 'primeng/tooltip';
     AppRoutingModule,
     CardModule,
     ChartModule,
-    TooltipModule
+    TooltipModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

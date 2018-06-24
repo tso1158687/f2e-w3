@@ -81,6 +81,7 @@ nav {
     }
   }
 }
+
 p-card {
   text-align: center;
 }
@@ -147,6 +148,9 @@ i {
   .order-item {
     padding-left: 40px;
     padding-right: 40px;
+    height: 110px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;;
     >div {
       display: inline-block;
       &.pic {
@@ -161,16 +165,43 @@ i {
           background-size: cover;
         }
       }
-      &.content{
+      &.content {
         width: 80%;
-        .title{
+        vertical-align: top;
+        >div {
+          text-align: left;
+          padding-left: 20px;
+          padding-bottom: 8px;
+        }
+        i {
+          padding-right: 10px;
+          &.fa-male {
+            padding-right: 15px;
+          }
+        }
+        .title {
           @include subtitle()
         }
-        .date{
+        .date {
           color: #9b9b9b;
         }
-        .name{
+        .name {
           color: #9b9b9b;
+        }
+        .total {
+          text-align: right;
+          position: relative;
+          display: inline;
+          right: -0%;
+          bottom: 80px;
+          >div{
+            &:first-child{
+              font-size: 14px;
+            }
+            &:last-child{
+              @include subtitle;
+            }
+          }
         }
       }
     }
